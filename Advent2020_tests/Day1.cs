@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Advent2020_tests
 {
-    public class UnitTest1
+    public class Day1
     {
         [Fact]
         public void Test1()
