@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Advent2020.Libraries
 {
-    public class Lib1
+    public class Day1
     {
         static public int TwoTargetSumsOf(int[] data, int target)
         { 

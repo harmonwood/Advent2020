@@ -7,6 +7,7 @@ namespace Advent2020.Libraries.Day_2
 {
     public class PasswordDataSetParser
     {
+
         public static int GetLowIterationFromString(string record)
         {
             string pattern = @"^(\d*)";
@@ -18,11 +19,13 @@ namespace Advent2020.Libraries.Day_2
             string pattern = @"^\d*-(\d*)";
             return int.Parse(ParseRegexFirstGroup(pattern, record));
         }
+
         public static string GetRepetCharFromString(string record)
         {
             string pattern = @"^\d*-\d*\s*(\w*)";
             return ParseRegexFirstGroup(pattern, record);
         }
+
         public static string GetPasswordFromString(string record)
         {
             string pattern = @"^\d*-\d*\s*\w*\s*:\s*(.*)$";
