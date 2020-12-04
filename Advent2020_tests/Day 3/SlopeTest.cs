@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Advent2020_tests.Day3
+namespace Advent2020_tests.Day_3
 {
     public class SlopeTest
     {

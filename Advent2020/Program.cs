@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Advent2020.Libraries.Day_4;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,6 +14,8 @@ namespace Advent2020
             Day2b();
             Day3a();
             Day3b();
+            Day4a();
+            Day4b();
         }
 
 
@@ -83,6 +86,28 @@ namespace Advent2020
             };
 
             Console.WriteLine("Day 3b: The number of multiplied trees on each Slope are {0}", slope.MultipySlopes(records, angles));
+        }
+        static void Day4a()
+        {
+            string[] records = System.IO.File
+                .ReadAllLines(@"../../../data/Day4.txt")
+                .ToArray();
+            List<Identification> Ids = IdentificationParser.Parse(records); 
+            int count = Ids.Count(
+                entry => entry.IsValid()
+                );
+            Console.WriteLine("Day 4a: The number of valid Ids are {0}", count);
+        }
+        static void Day4b()
+        {
+            string[] records = System.IO.File
+                .ReadAllLines(@"../../../data/Day4.txt")
+                .ToArray();
+            List<Identification> Ids = IdentificationParser.Parse(records); 
+            int count = Ids.Count(
+                entry => entry.IsStrictValid()
+                );
+            Console.WriteLine("Day 4b: The number of valid Ids are Strict Valid {0}", count);
         }
 
     }
